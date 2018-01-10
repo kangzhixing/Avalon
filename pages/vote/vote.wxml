@@ -1,0 +1,29 @@
+<view class="{{!resultdisplay?'db':'dn'}}">
+  <view style="position:fixed;top:5%;width:100%">
+    <view class="vote voteagree" hover-class='voteClick' bindtap="voteAgree"></view>
+  </view>
+  <view style="position:fixed;top:45%;width:100%">
+    <view class="vote votedisagree" bindtap="voteDisagree"></view>
+  </view>
+  <view style="position:fixed;top:80%;width:100%">
+    <view class="txtVoteSum">{{agree+disagree}}</view>
+  </view>
+  <view class="mask {{btnShowResult_display?'db':'dn'}}" bindtap="showResult">
+  </view>
+  <view class="btnShowResult {{btnShowResult_display?'db':'dn'}}" bindtap="showResult">查看结果
+  </view>
+</view>
+<view id="vResult" class="{{resultdisplay?'db':'dn'}}">
+  <view style="position:fixed;top:10%;width:100%">
+    <view class="{{txtResult?'db':'dn'}} success">Success</view>
+    <view class="{{!txtResult?'db':'dn'}} failed">Failed</view>
+  </view>
+  <view style="position:fixed;top:30%;width:100%">
+    <view class="vote voteagree" style="display:inline-block">{{agree}}</view>
+    <view class="vote votedisagree" style="display:inline-block">{{disagree}}</view>
+  </view>
+  <view style="position:fixed;top:70%;width:100%">
+    <button bindtap="reVote" class="btnVoteAgain">重新投票</button>
+    <button bindtap="goIndex" class="btnGoIndex">回到首页</button>
+  </view>
+</view>

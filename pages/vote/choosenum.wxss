@@ -1,0 +1,7 @@
+
+
+.btnStart{
+  color: white;
+  width: 160px;
+  background-color: green;
+}

@@ -1,0 +1,9 @@
+<view style='padding:30px'>
+  <label style='font-size:18px'>选择玩家数量：</label>
+  <view>
+    <slider min='2' max='5' bindchange='sliNumChange' show-value='true'></slider>
+  </view>
+</view>
+<view style="position:fixed;top:75%;width:100%">
+  <button bindtap="goVote" form-type="submit" class="btnStart">开始投票</button>
+</view>

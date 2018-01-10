@@ -1,0 +1,108 @@
+/* pages/vote/vote.wxss */
+
+.voteClick {
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+  background-color: aqua;
+}
+
+.mask {
+  z-index: 1000;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: #000;
+  color: white;
+}
+
+.btnShowResult {
+  top: 40%;
+  position: fixed;
+  z-index: 1001;
+  background-color: white;
+  color: grey;
+  width: 100%;
+  height: 80px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 80px;
+  opacity: 1;
+}
+
+.txtVoteSum {
+  font-size: 60px;
+  text-align: center;
+}
+
+.btnVoteAgain {
+  width: 160px;
+  background-color: lightgreen;
+}
+
+.btnGoIndex {
+  width: 160px;
+  margin-top: 20px;
+}
+
+.vote {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  box-shadow: 0 0 20px grey;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+#vResult {
+  text-align: center;
+  margin: auto auto;
+}
+
+#vResult .vote {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 20px grey;
+  text-align: center;
+  line-height: 100px;
+  margin: 30px;
+}
+
+.success {
+  text-align: center;
+  margin: 0 auto;
+  color: lightcoral;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.failed {
+  text-align: center;
+  margin: 0 auto;
+  color: black;
+  font-size: 50px;
+}
+
+.voteagree {
+  background-color: white;
+  font-size: 50px;
+  color: grey;
+}
+
+.votedisagree {
+  background-color: #505050;
+  font-size: 50px;
+  color: white;
+}
+
+.db {
+  display: block;
+}
+
+.dn {
+  display: none;
+}

@@ -1,0 +1,27 @@
+<!--pages/avalon/newgame.wxml-->
+<view style='padding:30px'>
+  <label style='font-size:18px'>选择玩家数量：</label>
+  <view>
+    <slider min='5' max='10' bindchange='sliNumChange' bindchanging='sliNumChange' show-value='true'></slider>
+  </view>
+  <view>
+    <view class="tr" style='margin-top: 110px'>
+      <view class="td"><image src='../resource/merlin.png' mode='aspectFit'></image></view>
+      <view class="td"><image src='../resource/percival.png' mode='aspectFit'></image></view>
+      <view class="td"><image src='../resource/loyal.png' mode='aspectFit'></image></view>
+      <view class="td {{loyal2?'db':'dn'}}"><image src='../resource/loyal.png' mode='aspectFit'></image></view>
+      <view class="td {{loyal3?'db':'dn'}}"><image src='../resource/loyal.png' mode='aspectFit'></image></view>
+    </view>
+    <view class="tr" style='margin-top: 50px'>
+      <view class="td {{loyal4?'db':'dn'}}"><image src='../resource/loyal.png' mode='aspectFit'></image></view>
+      <view class="td"><image src='../resource/morgana.png' mode='aspectFit'></image></view>
+      <view class="td"><image src='../resource/assassin.png' mode='aspectFit'></image></view>
+      <view class="td {{mordred?'db':'dn'}}"><image src='../resource/mordred.png' mode='aspectFit'></image></view>
+      <view class="td {{oberon?'db':'dn'}}"><image src='../resource/oberon.png' mode='aspectFit'></image></view>
+      <view class="td {{lackey?'db':'dn'}}"><image src='../resource/lackey.png' mode='aspectFit'></image></view>
+    </view>
+  </view>
+</view>
+<view style="position:fixed;top:80%;width:100%">
+  <button class='btnGetRole' bindtap='getRole'>创建游戏</button>
+</view>
