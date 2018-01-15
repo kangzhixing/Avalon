@@ -1,17 +1,21 @@
 <view class="{{!resultdisplay?'db':'dn'}}">
-  <view style="position:fixed;top:5%;width:100%">
-    <view class="vote voteagree" hover-class='voteClick' bindtap="voteAgree"></view>
-  </view>
-  <view style="position:fixed;top:45%;width:100%">
-    <view class="vote votedisagree" bindtap="voteDisagree"></view>
-  </view>
-  <view style="position:fixed;top:80%;width:100%">
-    <view class="txtVoteSum">{{agree+disagree}}</view>
-  </view>
-  <view class="mask {{btnShowResult_display?'db':'dn'}}" bindtap="showResult">
-  </view>
-  <view class="btnShowResult {{btnShowResult_display?'db':'dn'}}" bindtap="showResult">查看结果
-  </view>
+  <view class="voteOrderPage {{voteOrderDisplay?'db':'dn'}}" bindtap='closeVoteOrder'>
+      <view class='vNum'>
+        {{agree+disagree+1}}
+      </view>
+    </view>
+    <view style="position:fixed;top:12%;width:100%">
+      <view class="vote voteagree {{voteorder>0.5?'dn':''}}" bindtap="voteAgree"></view>
+      <view class="vote votedisagree {{voteorder<=0.5?'dn':''}}" bindtap="voteDisagree"></view>
+    </view>
+    <view style="position:fixed;top:55%;width:100%">
+      <view class="vote voteagree {{voteorder<=0.5?'dn':''}}" bindtap="voteAgree"></view>
+      <view class="vote votedisagree {{voteorder>0.5?'dn':''}}" bindtap="voteDisagree"></view>
+    </view>
+    <view class="voteOrderPage {{btnShowResult_display?'db':'dn'}}" bindtap="showResult">
+    </view>
+    <view class="btnShowResult {{btnShowResult_display?'db':'dn'}}" style='color:grey;background:whitesmoke' bindtap="showResult">查看结果
+    </view>
 </view>
 <view id="vResult" class="{{resultdisplay?'db':'dn'}}">
   <view style="position:fixed;top:10%;width:100%">

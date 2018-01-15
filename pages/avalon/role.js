@@ -10,6 +10,7 @@ Page({
     bgdisplay: true,
     index: 1,
     voteresultdisplay: false,
+    voteOrderDisplay: true,
     txtResult: true,
     btnShowResult_display: false,
     resultdisplay: false,
@@ -91,7 +92,7 @@ Page({
     });
 
   },
-  closeFirstRole: function(){
+  closeFirstRole: function () {
     this.setData({
       firstRole: false
     });
@@ -153,32 +154,41 @@ Page({
       voteorder: Math.random() > .5
     });
   },
+  closeVoteOrder: function () {
+    this.setData({
+      voteOrderDisplay: false
+    });
+  },
   voteAgree: function (e) {
-    if (this.data.agree + this.data.disagree < this.data.votenum) {
-      this.setData({
-        agree: this.data.agree + 1,
-        voteorder: Math.random() > .5
-      });
-    }
+    this.setData({
+      agree: this.data.agree + 1,
+      voteorder: Math.random() > .5
+    });
     if (this.data.agree + this.data.disagree == this.data.votenum) {
       this.setData({
         btnShowResult_display: true,
         txtResult: this.data.disagree == 0 || (this.data.missionindex == 4 && this.data.num >= 7 && this.data.disagree <= 1) ? true : false
+      });
+    } else if (this.data.agree + this.data.disagree < this.data.votenum) {
+      this.setData({
+        voteOrderDisplay: true
       });
     }
   },
 
   voteDisagree: function (e) {
-    if (this.data.agree + this.data.disagree < this.data.votenum) {
-      this.setData({
-        disagree: this.data.disagree + 1,
-        voteorder: Math.random() > .5
-      });
-    }
+    this.setData({
+      disagree: this.data.disagree + 1,
+      voteorder: Math.random() > .5
+    });
     if (this.data.agree + this.data.disagree == this.data.votenum) {
       this.setData({
         btnShowResult_display: true,
         txtResult: this.data.disagree == 0 || (this.data.missionindex == 4 && this.data.num >= 7 && this.data.disagree <= 1) ? true : false
+      });
+    } else if (this.data.agree + this.data.disagree < this.data.votenum) {
+      this.setData({
+        voteOrderDisplay: true
       });
     }
   },

@@ -38,9 +38,32 @@
   text-align: center;
 }
 
+.voteOrderPage{
+  z-index: 900;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: whitesmoke;
+  color: grey;
+  text-align: center;
+}
+
+.vNum {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  top: 35%;
+  color: grey;
+  font-size: 100px;
+  background-color: whitesmoke;
+}
+
 .btnVoteAgain {
   width: 160px;
-  background-color: lightgreen;
+  background-color: green;
+  color: white;
 }
 
 .btnGoIndex {

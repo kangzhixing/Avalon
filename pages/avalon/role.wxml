@@ -8,15 +8,16 @@
   </view>
 </view>
 <view id="viewRole" class="{{resultdisplay&&!votedisplay?'db':'dn'}}">
-  <view class="firstRolePage {{firstRole?'db':'dn'}}" bindtap='closeFirstRole'>
-    <view class='btnShowResult' style="font-size:20px{{num>=9?';height: 160px;':''}}">
-      由第{{index+1}}号玩家开始游戏
-      <view class="{{num>=9?'db':'dn'}}">
-        其上一位玩家获得女神牌
-      </view>
+  <view class="mask {{firstRole?'db':'dn'}}" bindtap="closeFirstRole">
+  </view>
+  <view class="btnShowResult {{firstRole?'db':'dn'}}" bindtap="closeFirstRole" style="color:grey;font-size:30px{{num>=9?';height: 160px;':''}}">
+    由第{{index+1}}号玩家开始游戏
+    <view class="{{num>=9?'db':'dn'}}">
+      第{{index==0?num:index}}号玩家获得女神牌
     </view>
   </view>
-  <view style='padding: 20px;'>
+  <view style="width:100%;text-align:center;margin:20px 0 0 0;color:#777777">点击查看身份</view>
+  <view style='padding: 0 20px;'>
     <view class="tr" style='margin-top: 30px'>
       <view class="td">
         <view class="vUser {{!detail1?'db':'dn'}}" data-i='1' bindtap='showRoleDetail'>1</view>
@@ -62,7 +63,8 @@
       </view>
     </view>
   </view>
-  <view style="position:fixed;top:60%;width:100%">
+  <view style="position:fixed;top:55%;width:100%">
+    <view class='tr' style="width:100%;text-align:center;margin-bottom:10px;color:#777777">任务版</view>
     <view class='tr'>
       <view class="mission td {{missionresult1}}" bindtap='showVote' data-index='1' data-missionindex='{{mission1}}'>{{mission1}}</view>
       <view class="mission td {{missionresult2}}" bindtap='showVote' data-index='2' data-missionindex='{{mission2}}'>{{mission2}}</view>
@@ -76,25 +78,22 @@
 </view>
 <view id="viewVote" class="{{votedisplay?'db':'dn'}}">
   <view id='vVote' class="{{!voteresultdisplay?'db':'dn'}}">
-    <view class="firstRolePage {{firstRole?'db':'dn'}}" bindtap='closeVoteOrder'>
+    <view class="voteOrderPage {{voteOrderDisplay?'db':'dn'}}" bindtap='closeVoteOrder'>
       <view class='vNum'>
         {{agree+disagree+1}}
       </view>
     </view>
-    <view style="position:fixed;top:5%;width:100%">
+    <view style="position:fixed;top:12%;width:100%">
       <view class="vote voteagree {{voteorder>0.5?'dn':''}}" bindtap="voteAgree"></view>
       <view class="vote votedisagree {{voteorder<=0.5?'dn':''}}" bindtap="voteDisagree"></view>
     </view>
-    <view style="position:fixed;top:45%;width:100%">
+    <view style="position:fixed;top:55%;width:100%">
       <view class="vote voteagree {{voteorder<=0.5?'dn':''}}" bindtap="voteAgree"></view>
       <view class="vote votedisagree {{voteorder>0.5?'dn':''}}" bindtap="voteDisagree"></view>
     </view>
-    <view style="position:fixed;top:80%;width:100%">
-      <view class="txtVoteSum">{{agree+disagree}}</view>
+    <view class="voteOrderPage {{btnShowResult_display?'db':'dn'}}" bindtap="showResult">
     </view>
-    <view class="mask {{btnShowResult_display?'db':'dn'}}" bindtap="showResult">
-    </view>
-    <view class="btnShowResult {{btnShowResult_display?'db':'dn'}}" bindtap="showResult">查看结果
+    <view class="btnShowResult {{btnShowResult_display?'db':'dn'}}" style='color:grey;background:whitesmoke' bindtap="showResult">查看结果
     </view>
   </view>
   <view class="vResult {{voteresultdisplay?'db':'dn'}}">
