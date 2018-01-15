@@ -25,7 +25,7 @@ Page({
         });
       }
       wx.setNavigationBarTitle({
-        title: "投票结果"
+        title: "任务结果"
       });
     }
   },
@@ -46,7 +46,7 @@ Page({
         });
       }
       wx.setNavigationBarTitle({
-        title: "投票结果"
+        title: "任务结果"
       });
     }
   },

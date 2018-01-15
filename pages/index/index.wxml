@@ -6,6 +6,6 @@
   </view>
   <view class="vContent">
     <button bindtap="newGame" form-type="submit" class="btnNewGame">开始游戏</button>
-    <button bindtap="goVote" form-type="submit" class="btnStart">直接投票</button>
+    <button bindtap="goVote" form-type="submit" class="btnStart">直接进行任务</button>
   </view>
 </view>

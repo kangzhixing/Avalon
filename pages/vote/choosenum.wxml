@@ -5,5 +5,5 @@
   </view>
 </view>
 <view style="position:fixed;top:75%;width:100%">
-  <button bindtap="goVote" form-type="submit" class="btnStart">开始投票</button>
+  <button bindtap="goVote" form-type="submit" class="btnStart">开始任务</button>
 </view>

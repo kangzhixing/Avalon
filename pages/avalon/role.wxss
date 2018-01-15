@@ -88,43 +88,47 @@
 }
 
 .vUser {
-  z-index:10;
+  z-index: 10;
   line-height: 90px;
   text-align: center;
-  width:100%;
+  width: 100%;
   height: 90px;
   border-radius: 10px;
   box-shadow: 0 0 5px grey;
   background-color: whitesmoke;
 }
 
-.btnFinishMission{
+.btnFinishMission {
   width: 160px;
   background-color: lightgreen;
 }
 
-#viewRole{
-  z-index:10;
+#viewRole {
+  z-index: 10;
   position: fixed;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   top: 0;
 }
 
-#viewVote{
-  z-index:20;
+#viewVote {
+  z-index: 20;
   position: fixed;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   top: 0;
 }
 
-#vResult {
+.vResult {
+  z-index: 21;
+  position: fixed;
+  width: 100%;
+  height: 100%;
   text-align: center;
   margin: auto auto;
 }
 
-#vResult .vote {
+.vResult .vote {
   width: 100px;
   height: 100px;
   box-shadow: 0 0 20px grey;
@@ -149,9 +153,9 @@
 }
 
 .vote {
-  display: block;
   width: 150px;
   height: 150px;
+  line-height: 150px;
   border-radius: 150px;
   box-shadow: 0 0 20px grey;
   cursor: pointer;
@@ -177,15 +181,6 @@
   height: 100%;
 }
 
-#vResult {
-  z-index: 21;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  margin: auto auto;
-}
-
 .txtVoteSum {
   font-size: 60px;
   text-align: center;
@@ -196,7 +191,7 @@
   position: fixed;
   z-index: 1001;
   background-color: white;
-  color: grey;
+  color: #333333;
   width: 100%;
   height: 80px;
   font-size: 40px;
@@ -216,21 +211,32 @@
   color: white;
 }
 
-.mission{
-  display: block;
-  width: 60px;
-  height: 60px;
-  border-radius: 60px;
-  box-shadow: 0 0 5px grey;
-  margin: 8px;
+.firstRolePage{
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: grey;
+  opacity: 0.5;
   text-align: center;
-  line-height: 60px;
 }
 
-.missionsuccess{
-  background-color:lightcoral;
+.mission {
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  box-shadow: 0 0 5px grey;
+  margin: 15px;
+  text-align: center;
+  line-height: 70px;
 }
 
-.missionfailed{
-  background-color:lightslategray;
+.missionsuccess {
+  background-color: lightcoral;
+}
+
+.missionfailed {
+  background-color: lightslategray;
 }

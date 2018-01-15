@@ -23,7 +23,7 @@
     <view class="vote votedisagree" style="display:inline-block">{{disagree}}</view>
   </view>
   <view style="position:fixed;top:70%;width:100%">
-    <button bindtap="reVote" class="btnVoteAgain">重新投票</button>
+    <button bindtap="reVote" class="btnVoteAgain">重新做任务</button>
     <button bindtap="goIndex" class="btnGoIndex">回到首页</button>
   </view>
 </view>

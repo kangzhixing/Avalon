@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    firstRole: true,
+    voteorder: false,
     bgdisplay: true,
     index: 1,
     voteresultdisplay: false,
@@ -83,16 +85,22 @@ Page({
       voteresultdisplay: true
     });
   },
-  showRole: function () {
+  showNextRole: function () {
     this.setData({
       bgdisplay: false
     });
 
   },
+  closeFirstRole: function(){
+    this.setData({
+      firstRole: false
+    });
+  },
   showBg: function () {
     if (this.data.num == this.data.index) {
       this.setData({
-        resultdisplay: true
+        resultdisplay: true,
+        index: parseInt(Math.random() * 100) % this.data.num
       });
       return;
     }
@@ -141,13 +149,15 @@ Page({
     this.setData({
       votedisplay: true,
       votenum: e.target.dataset.missionindex,
-      missionindex: e.target.dataset.index
+      missionindex: e.target.dataset.index,
+      voteorder: Math.random() > .5
     });
   },
   voteAgree: function (e) {
     if (this.data.agree + this.data.disagree < this.data.votenum) {
       this.setData({
-        agree: this.data.agree + 1
+        agree: this.data.agree + 1,
+        voteorder: Math.random() > .5
       });
     }
     if (this.data.agree + this.data.disagree == this.data.votenum) {
@@ -161,7 +171,8 @@ Page({
   voteDisagree: function (e) {
     if (this.data.agree + this.data.disagree < this.data.votenum) {
       this.setData({
-        disagree: this.data.disagree + 1
+        disagree: this.data.disagree + 1,
+        voteorder: Math.random() > .5
       });
     }
     if (this.data.agree + this.data.disagree == this.data.votenum) {

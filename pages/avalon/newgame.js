@@ -60,8 +60,8 @@ Page({
       case 8: {
         this.setData({
           loyal2: true,
-          loyal3: true,
-          loyal4: false,
+          loyal3: false,
+          loyal4: true,
           mordred: false,
           oberon: false,
           lackey: true,

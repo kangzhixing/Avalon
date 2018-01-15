@@ -1,6 +1,6 @@
 <!--pages/avalon/role.wxml-->
 <view class="{{!resultdisplay&&!votedisplay?'db':'dn'}}">
-  <view class="vBackground {{bgdisplay?'db':'dn'}}" bindtap='showRole'>
+  <view class="vBackground {{bgdisplay?'db':'dn'}}" bindtap='showNextRole'>
     <view class='vNum'>{{index}}</view>
   </view>
   <view class='vRole' bindtap='showBg'>
@@ -8,6 +8,14 @@
   </view>
 </view>
 <view id="viewRole" class="{{resultdisplay&&!votedisplay?'db':'dn'}}">
+  <view class="firstRolePage {{firstRole?'db':'dn'}}" bindtap='closeFirstRole'>
+    <view class='btnShowResult' style="font-size:20px{{num>=9?';height: 160px;':''}}">
+      由第{{index+1}}号玩家开始游戏
+      <view class="{{num>=9?'db':'dn'}}">
+        其上一位玩家获得女神牌
+      </view>
+    </view>
+  </view>
   <view style='padding: 20px;'>
     <view class="tr" style='margin-top: 30px'>
       <view class="td">
@@ -54,25 +62,32 @@
       </view>
     </view>
   </view>
-  <view style="position:fixed;top:50%;left:15%;width:100%">
-    <view style='10px'>
-      <view class="mission {{missionresult1}}" bindtap='showVote' data-index='1' data-missionindex='{{mission1}}' style="display:inline-block">{{mission1}}</view>
-      <view class="mission {{missionresult2}}" bindtap='showVote' data-index='2' data-missionindex='{{mission2}}' style="display:inline-block">{{mission2}}</view>
+  <view style="position:fixed;top:60%;width:100%">
+    <view class='tr'>
+      <view class="mission td {{missionresult1}}" bindtap='showVote' data-index='1' data-missionindex='{{mission1}}'>{{mission1}}</view>
+      <view class="mission td {{missionresult2}}" bindtap='showVote' data-index='2' data-missionindex='{{mission2}}'>{{mission2}}</view>
+      <view class="mission td {{missionresult3}}" bindtap='showVote' data-index='3' data-missionindex='{{mission3}}'>{{mission3}}</view>
     </view>
-    <view>
-      <view class="mission {{missionresult3}}" bindtap='showVote' data-index='3' data-missionindex='{{mission3}}' style="display:inline-block">{{mission3}}</view>
-      <view class="mission {{missionresult4}}" bindtap='showVote' data-index='4' data-missionindex='{{mission4}}' style="display:inline-block">{{mission4}}</view>
-      <view class="mission {{missionresult5}}" bindtap='showVote' data-index='5' data-missionindex='{{mission5}}' style="display:inline-block">{{mission5}}</view>
+    <view class='tr' style='margin-top: 30px'>
+      <view class="mission td {{missionresult4}}" bindtap='showVote' data-index='4' data-missionindex='{{mission4}}'>{{mission4}}</view>
+      <view class="mission td {{missionresult5}}" bindtap='showVote' data-index='5' data-missionindex='{{mission5}}'>{{mission5}}</view>
     </view>
   </view>
 </view>
 <view id="viewVote" class="{{votedisplay?'db':'dn'}}">
   <view id='vVote' class="{{!voteresultdisplay?'db':'dn'}}">
+    <view class="firstRolePage {{firstRole?'db':'dn'}}" bindtap='closeVoteOrder'>
+      <view class='vNum'>
+        {{agree+disagree+1}}
+      </view>
+    </view>
     <view style="position:fixed;top:5%;width:100%">
-      <view class="vote voteagree" hover-class='voteClick' bindtap="voteAgree"></view>
+      <view class="vote voteagree {{voteorder>0.5?'dn':''}}" bindtap="voteAgree"></view>
+      <view class="vote votedisagree {{voteorder<=0.5?'dn':''}}" bindtap="voteDisagree"></view>
     </view>
     <view style="position:fixed;top:45%;width:100%">
-      <view class="vote votedisagree" bindtap="voteDisagree"></view>
+      <view class="vote voteagree {{voteorder<=0.5?'dn':''}}" bindtap="voteAgree"></view>
+      <view class="vote votedisagree {{voteorder>0.5?'dn':''}}" bindtap="voteDisagree"></view>
     </view>
     <view style="position:fixed;top:80%;width:100%">
       <view class="txtVoteSum">{{agree+disagree}}</view>
@@ -82,7 +97,7 @@
     <view class="btnShowResult {{btnShowResult_display?'db':'dn'}}" bindtap="showResult">查看结果
     </view>
   </view>
-  <view id="vResult" class="{{voteresultdisplay?'db':'dn'}}">
+  <view class="vResult {{voteresultdisplay?'db':'dn'}}">
     <view style="position:fixed;top:10%;width:100%">
       <view class="{{txtResult?'db':'dn'}} success">Success</view>
       <view class="{{!txtResult?'db':'dn'}} failed">Failed</view>
