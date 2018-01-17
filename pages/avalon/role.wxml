@@ -4,7 +4,8 @@
     <view class='vNum'>{{index}}</view>
   </view>
   <view class='vRole' bindtap='showBg'>
-    <image src='{{userList[index-1].src}}' mode='aspectFit'></image>
+    <view class='txtRoleNotice'>确认身份牌</view>
+    <image style='width:65%' src='{{userList[index-1].src}}' mode='aspectFit'></image>
   </view>
 </view>
 <view id="viewRole" class="{{resultdisplay&&!votedisplay?'db':'dn'}}">
