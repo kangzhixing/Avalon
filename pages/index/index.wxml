@@ -2,10 +2,10 @@
 <view class="container">
   <view class="userinfo">
     <image class="userinfo-avatar" src="../resource/index.jpg"></image>
-    <text class="title">阿瓦隆</text>
+    <text class="title">{{userName}}</text>
   </view>
   <view class="vContent">
-    <button bindtap="newGame" form-type="submit" class="btnNewGame">开始游戏</button>
-    <button bindtap="goVote" form-type="submit" class="btnStart">直接进行任务</button>
+    <button bindtap="newGame" form-type="submit" class="btnAvalon">阿瓦隆(5~10)</button>
+    <button class="btnWerewolf">狼人杀(暂未开放)</button>
   </view>
 </view>

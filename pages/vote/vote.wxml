@@ -1,8 +1,6 @@
 <view class="{{!resultdisplay?'db':'dn'}}">
   <view class="voteOrderPage {{voteOrderDisplay?'db':'dn'}}" bindtap='closeVoteOrder'>
-      <view class='vNum'>
-        {{agree+disagree+1}}
-      </view>
+      <view class='vNum'>{{agree+disagree+1}}</view>
     </view>
     <view style="position:fixed;top:12%;width:100%">
       <view class="vote voteagree {{voteorder>0.5?'dn':''}}" bindtap="voteAgree"></view>
@@ -28,6 +26,6 @@
   </view>
   <view style="position:fixed;top:70%;width:100%">
     <button bindtap="reVote" class="btnVoteAgain">重新做任务</button>
-    <button bindtap="goIndex" class="btnGoIndex">回到首页</button>
+    <button bindtap="goIndex" class="btnGoIndex">回到选人页面</button>
   </view>
 </view>

@@ -42,14 +42,14 @@
   line-height: 45px;
 }
 
-.btnStart {
-  width: 160px;
+.btnWerewolf {
+  width: 180px;
   margin-top: 10px;
   background-color: lightgrey;
 }
 
-.btnNewGame {
-  width: 160px;
+.btnAvalon {
+  width: 180px;
   background-color: green;
   color: white;
 }

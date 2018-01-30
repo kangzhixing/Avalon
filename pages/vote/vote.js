@@ -72,9 +72,7 @@ Page({
   },
 
   goIndex:function(){
-    wx.navigateTo({
-      url: '../index/index'
-    })
+    wx.navigateBack();
   },
 
   /**

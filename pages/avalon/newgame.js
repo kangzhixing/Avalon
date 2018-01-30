@@ -106,4 +106,9 @@ Page({
   onLoad: function (options) {
 
   },
+  goVote: function (e) {
+    wx.navigateTo({
+      url: '../vote/choosenum'
+    })
+  }
 })

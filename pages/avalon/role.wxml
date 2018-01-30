@@ -12,77 +12,77 @@
   <view class="mask {{firstRole?'db':'dn'}}" bindtap="closeFirstRole">
   </view>
   <view class="btnShowResult {{firstRole?'db':'dn'}}" bindtap="closeFirstRole" style="color:grey;font-size:30px{{num>=9?';height: 160px;':''}}">
-    由第{{index+1}}号玩家开始游戏
+    由第{{index+1}}号玩家开始
     <view class="{{num>=9?'db':'dn'}}">
       第{{index==0?num:index}}号玩家获得女神牌
     </view>
   </view>
-  <view style="width:100%;text-align:center;margin:20px 0 0 0;color:#777777">点击查看身份</view>
-  <view style='padding: 0 20px;'>
-    <view class="tr" style='margin-top: 30px'>
-      <view class="td">
-        <view class="vUser {{!detail1?'db':'dn'}}" data-i='1' bindtap='showRoleDetail'>1</view>
-        <image src='{{img1}}' class="{{detail1?'db':'dn'}}" data-i='1' bindtap='showRoleDetail' mode='aspectFit'></image>
+  <view class="{{firstRole?'blur':''}}">
+    <view style="width:100%;text-align:center;margin:20px 0 0 0;color:#777777">点击查看身份</view>
+    <view style='padding: 0 20px;'>
+      <view class="tr" style='margin-top: 30px'>
+        <view class="td">
+          <view class="vUser {{!detail1?'db':'dn'}}" data-i='1' bindtap='showRoleDetail'>1</view>
+          <image src='{{img1}}' class="{{detail1?'db':'dn'}}" data-i='1' bindtap='showRoleDetail' mode='aspectFit'></image>
+        </view>
+        <view class="td">
+          <view class="vUser {{!detail2?'db':'dn'}}" data-i='2' bindtap='showRoleDetail'>2</view>
+          <image src='{{img2}}' class="{{detail2?'db':'dn'}}" data-i='2' bindtap='showRoleDetail' mode='aspectFit'></image>
+        </view>
+        <view class="td">
+          <view class="vUser {{!detail3?'db':'dn'}}" data-i='3' bindtap='showRoleDetail'>3</view>
+          <image src='{{img3}}' class="{{detail3?'db':'dn'}}" data-i='3' bindtap='showRoleDetail' mode='aspectFit'></image>
+        </view>
+        <view class="td">
+          <view class="vUser {{!detail4?'db':'dn'}}" data-i='4' bindtap='showRoleDetail'>4</view>
+          <image src='{{img4}}' class="{{detail4?'db':'dn'}}" data-i='4' bindtap='showRoleDetail' mode='aspectFit'></image>
+        </view>
+        <view class="td">
+          <view class="vUser {{!detail5?'db':'dn'}}" data-i='5' bindtap='showRoleDetail'>5</view>
+          <image src='{{img5}}' class="{{detail5?'db':'dn'}}" data-i='5' bindtap='showRoleDetail' mode='aspectFit'></image>
+        </view>
       </view>
-      <view class="td">
-        <view class="vUser {{!detail2?'db':'dn'}}" data-i='2' bindtap='showRoleDetail'>2</view>
-        <image src='{{img2}}' class="{{detail2?'db':'dn'}}" data-i='2' bindtap='showRoleDetail' mode='aspectFit'></image>
-      </view>
-      <view class="td">
-        <view class="vUser {{!detail3?'db':'dn'}}" data-i='3' bindtap='showRoleDetail'>3</view>
-        <image src='{{img3}}' class="{{detail3?'db':'dn'}}" data-i='3' bindtap='showRoleDetail' mode='aspectFit'></image>
-      </view>
-      <view class="td">
-        <view class="vUser {{!detail4?'db':'dn'}}" data-i='4' bindtap='showRoleDetail'>4</view>
-        <image src='{{img4}}' class="{{detail4?'db':'dn'}}" data-i='4' bindtap='showRoleDetail' mode='aspectFit'></image>
-      </view>
-      <view class="td">
-        <view class="vUser {{!detail5?'db':'dn'}}" data-i='5' bindtap='showRoleDetail'>5</view>
-        <image src='{{img5}}' class="{{detail5?'db':'dn'}}" data-i='5' bindtap='showRoleDetail' mode='aspectFit'></image>
+      <view class="tr" style='margin-top: 50px'>
+        <view class="td">
+          <view class="vUser {{!detail6&&user6?'db':'dn'}}" data-i='6' bindtap='showRoleDetail'>6</view>
+          <image src='{{img6}}' class="{{detail6?'db':'dn'}}" data-i='6' bindtap='showRoleDetail' mode='aspectFit'></image>
+        </view>
+        <view class="td">
+          <view class="vUser {{!detail7&&user7?'db':'dn'}}" data-i='7' bindtap='showRoleDetail'>7</view>
+          <image src='{{img7}}' class="{{detail7?'db':'dn'}}" data-i='7' bindtap='showRoleDetail' mode='aspectFit'></image>
+        </view>
+        <view class="td">
+          <view class="vUser {{!detail8&&user8?'db':'dn'}}" data-i='8' bindtap='showRoleDetail'>8</view>
+          <image src='{{img8}}' class="{{detail8?'db':'dn'}}" data-i='8' bindtap='showRoleDetail' mode='aspectFit'></image>
+        </view>
+        <view class="td">
+          <view class="vUser {{!detail9&&user9?'db':'dn'}}" data-i='9' bindtap='showRoleDetail'>9</view>
+          <image src='{{img9}}' class="{{detail9?'db':'dn'}}" data-i='9' bindtap='showRoleDetail' mode='aspectFit'></image>
+        </view>
+        <view class="td">
+          <view class="vUser {{!detail10&&user10?'db':'dn'}}" data-i='10' bindtap='showRoleDetail'>10</view>
+          <image src='{{img10}}' class="{{detail10?'db':'dn'}}" data-i='10' bindtap='showRoleDetail' mode='aspectFit'></image>
+        </view>
       </view>
     </view>
-    <view class="tr" style='margin-top: 50px'>
-      <view class="td">
-        <view class="vUser {{!detail6&&user6?'db':'dn'}}" data-i='6' bindtap='showRoleDetail'>6</view>
-        <image src='{{img6}}' class="{{detail6?'db':'dn'}}" data-i='6' bindtap='showRoleDetail' mode='aspectFit'></image>
+    <view style="position:fixed;top:55%;width:100%">
+      <view class='tr' style="width:100%;text-align:center;margin-bottom:10px;color:#777777">任务版</view>
+      <view class='tr'>
+        <view class="mission td {{missionresult1}}" bindtap='showVote' data-index='1' data-missionindex='{{mission1}}'>{{mission1}}</view>
+        <view class="mission td {{missionresult2}}" bindtap='showVote' data-index='2' data-missionindex='{{mission2}}'>{{mission2}}</view>
+        <view class="mission td {{missionresult3}}" bindtap='showVote' data-index='3' data-missionindex='{{mission3}}'>{{mission3}}</view>
       </view>
-      <view class="td">
-        <view class="vUser {{!detail7&&user7?'db':'dn'}}" data-i='7' bindtap='showRoleDetail'>7</view>
-        <image src='{{img7}}' class="{{detail7?'db':'dn'}}" data-i='7' bindtap='showRoleDetail' mode='aspectFit'></image>
+      <view class='tr' style='margin-top: 30px'>
+        <view class="mission td {{missionresult4}}" bindtap='showVote' data-index='4' data-missionindex='{{mission4}}'>{{mission4}}</view>
+        <view class="mission td {{missionresult5}}" bindtap='showVote' data-index='5' data-missionindex='{{mission5}}'>{{mission5}}</view>
       </view>
-      <view class="td">
-        <view class="vUser {{!detail8&&user8?'db':'dn'}}" data-i='8' bindtap='showRoleDetail'>8</view>
-        <image src='{{img8}}' class="{{detail8?'db':'dn'}}" data-i='8' bindtap='showRoleDetail' mode='aspectFit'></image>
-      </view>
-      <view class="td">
-        <view class="vUser {{!detail9&&user9?'db':'dn'}}" data-i='9' bindtap='showRoleDetail'>9</view>
-        <image src='{{img9}}' class="{{detail9?'db':'dn'}}" data-i='9' bindtap='showRoleDetail' mode='aspectFit'></image>
-      </view>
-      <view class="td">
-        <view class="vUser {{!detail10&&user10?'db':'dn'}}" data-i='10' bindtap='showRoleDetail'>10</view>
-        <image src='{{img10}}' class="{{detail10?'db':'dn'}}" data-i='10' bindtap='showRoleDetail' mode='aspectFit'></image>
-      </view>
-    </view>
-  </view>
-  <view style="position:fixed;top:55%;width:100%">
-    <view class='tr' style="width:100%;text-align:center;margin-bottom:10px;color:#777777">任务版</view>
-    <view class='tr'>
-      <view class="mission td {{missionresult1}}" bindtap='showVote' data-index='1' data-missionindex='{{mission1}}'>{{mission1}}</view>
-      <view class="mission td {{missionresult2}}" bindtap='showVote' data-index='2' data-missionindex='{{mission2}}'>{{mission2}}</view>
-      <view class="mission td {{missionresult3}}" bindtap='showVote' data-index='3' data-missionindex='{{mission3}}'>{{mission3}}</view>
-    </view>
-    <view class='tr' style='margin-top: 30px'>
-      <view class="mission td {{missionresult4}}" bindtap='showVote' data-index='4' data-missionindex='{{mission4}}'>{{mission4}}</view>
-      <view class="mission td {{missionresult5}}" bindtap='showVote' data-index='5' data-missionindex='{{mission5}}'>{{mission5}}</view>
     </view>
   </view>
 </view>
 <view id="viewVote" class="{{votedisplay?'db':'dn'}}">
   <view id='vVote' class="{{!voteresultdisplay?'db':'dn'}}">
     <view class="voteOrderPage {{voteOrderDisplay?'db':'dn'}}" bindtap='closeVoteOrder'>
-      <view class='vNum'>
-        {{agree+disagree+1}}
-      </view>
+      <view class='vNum'>{{agree+disagree+1}}</view>
     </view>
     <view style="position:fixed;top:12%;width:100%">
       <view class="vote voteagree {{voteorder>0.5?'dn':''}}" bindtap="voteAgree"></view>

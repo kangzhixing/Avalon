@@ -122,6 +122,10 @@
   background-color: whitesmoke;
 }
 
+.blur{  
+  filter:blur(3px);
+}
+
 #viewVote {
   z-index: 20;
   position: fixed;
