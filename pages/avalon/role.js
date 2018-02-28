@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    roleNotice: "",
     firstRole: true,
     voteorder: false,
     bgdisplay: true,
@@ -79,7 +80,13 @@ Page({
     }],
     num: 0,
     rolestr: "",
-    userList: []
+    userList: [],
+    merlinNotice: "坏人阵营为",
+    percivalNotice: "梅林存在于",
+    morganaNotice: "您的队友为",
+    mordredNotice: "您的队友为",
+    assassinNotice: "您的队友为",
+    lackeyNotice: "您的队友为"
   },
   showResult: function () {
     this.setData({
@@ -110,6 +117,16 @@ Page({
       index: this.data.index + 1
     });
 
+    switch (this.data.userList[this.data.index - 1].id) {
+      case 0: this.setData({ roleNotice: this.data.merlinNotice }); break;
+      case 1: this.setData({ roleNotice: this.data.percivalNotice }); break;
+      case 2: this.setData({ roleNotice: "请确认身份" }); break;
+      case 3: this.setData({ roleNotice: this.data.morganaNotice }); break;
+      case 4: this.setData({ roleNotice: this.data.assassinNotice }); break;
+      case 5: this.setData({ roleNotice: this.data.mordredNotice }); break;
+      case 6: this.setData({ roleNotice: "请确认身份" }); break;
+      case 7: this.setData({ roleNotice: this.data.lackeyNotice }); break;
+    }
   },
   finishMission: function () {
     switch (this.data.missionindex) {
@@ -207,7 +224,6 @@ Page({
     for (var i = 0; i < list.length; i++) {
       if (list[i] != "") {
         userList.push(this.data.roleList[list[i]]);
-
       }
     }
     //打乱列表顺序
@@ -224,12 +240,29 @@ Page({
     userList.sort(randomsort);
     userList.sort(randomsort);
     userList.sort(randomsort);
+
     //赋值
     this.setData({
       userList: userList
     });
+
+    var merlinNotice = "坏人阵营为";
+    var percivalNotice = "梅林存在于";
+    var morganaNotice = "您的队友为";
+    var mordredNotice = "您的队友为";
+    var assassinNotice = "您的队友为";
+    var lackeyNotice = "您的队友为";
     for (var i = 0; i < userList.length; i++) {
-      switch (i + 1) {
+      var k = i + 1;
+      switch (userList[i].id) {
+        case 0: percivalNotice += k + " "; break;
+        case 3: percivalNotice += k + " "; merlinNotice += k + " "; mordredNotice += k + " "; lackeyNotice += k + " "; assassinNotice += k + " "; break;
+        case 4: merlinNotice += k + " "; morganaNotice += k + " "; mordredNotice += k + " "; lackeyNotice += k + " "; break;
+        case 5: merlinNotice += k + " "; morganaNotice += k + " "; lackeyNotice += k + " "; assassinNotice += k + " "; break;
+        case 6: merlinNotice += k + " "; break;
+        case 7: merlinNotice += k + " "; morganaNotice += k + " "; mordredNotice += k + " "; assassinNotice += k + " "; break;
+      }
+      switch (k) {
         case 1: this.setData({ img1: userList[i].src }); break;
         case 2: this.setData({ img2: userList[i].src }); break;
         case 3: this.setData({ img3: userList[i].src }); break;
@@ -242,6 +275,26 @@ Page({
         case 10: this.setData({ img10: userList[i].src, user10: true }); break;
       }
     }
+    this.setData({
+      merlinNotice: merlinNotice,
+      percivalNotice: percivalNotice,
+      morganaNotice: morganaNotice,
+      mordredNotice: mordredNotice,
+      assassinNotice: assassinNotice,
+      lackeyNotice: lackeyNotice,
+    });
+
+    switch (this.data.userList[0].id) {
+      case 0: this.setData({ roleNotice: merlinNotice }); break;
+      case 1: this.setData({ roleNotice: percivalNotice }); break;
+      case 2: this.setData({ roleNotice: "请确认身份" }); break;
+      case 3: this.setData({ roleNotice: morganaNotice }); break;
+      case 4: this.setData({ roleNotice: assassinNotice }); break;
+      case 5: this.setData({ roleNotice: mordredNotice }); break;
+      case 6: this.setData({ roleNotice: "请确认身份" }); break;
+      case 7: this.setData({ roleNotice: lackeyNotice }); break;
+    }
+
     //填充板子
     switch (this.data.num) {
       case 5: this.setData({

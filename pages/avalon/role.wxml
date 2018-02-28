@@ -4,14 +4,14 @@
     <view class='vNum'>{{index}}</view>
   </view>
   <view class='vRole' bindtap='showBg'>
-    <view class='txtRoleNotice'>确认身份牌</view>
+    <view class='txtRoleNotice'>{{roleNotice}}</view>
     <image style='width:65%' src='{{userList[index-1].src}}' mode='aspectFit'></image>
   </view>
 </view>
 <view id="viewRole" class="{{resultdisplay&&!votedisplay?'db':'dn'}}">
   <view class="mask {{firstRole?'db':'dn'}}" bindtap="closeFirstRole">
   </view>
-  <view class="btnShowResult {{firstRole?'db':'dn'}}" bindtap="closeFirstRole" style="color:grey;font-size:30px{{num>=9?';height: 160px;':''}}">
+  <view class="btnShowResult {{firstRole?'db':'dn'}}" bindtap="closeFirstRole" style="color:white;font-size:30px{{num>=9?';height: 160px;':''}}">
     由第{{index+1}}号玩家开始
     <view class="{{num>=9?'db':'dn'}}">
       第{{index==0?num:index}}号玩家获得女神牌

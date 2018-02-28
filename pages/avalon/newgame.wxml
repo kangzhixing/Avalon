@@ -1,6 +1,6 @@
 <!--pages/avalon/newgame.wxml-->
 <view style='padding:30px'>
-  <label style='font-size:18px'>玩家数量：</label>
+  <label style='font-size:18px'>人数：</label>
   <view>
     <slider min='5' max='10' bindchange='sliNumChange' bindchanging='sliNumChange' show-value='true'></slider>
   </view>
