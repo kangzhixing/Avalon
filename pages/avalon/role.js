@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    roleDetailNotice: "点击查看身份",
     roleNotice: "",
     firstRole: true,
     voteorder: false,
@@ -81,12 +82,12 @@ Page({
     num: 0,
     rolestr: "",
     userList: [],
-    merlinNotice: "坏人阵营为",
-    percivalNotice: "梅林存在于",
-    morganaNotice: "您的队友为",
-    mordredNotice: "您的队友为",
-    assassinNotice: "您的队友为",
-    lackeyNotice: "您的队友为"
+    merlinNotice: "",
+    percivalNotice: "",
+    morganaNotice: "",
+    mordredNotice: "",
+    assassinNotice: "",
+    lackeyNotice: ""
   },
   showResult: function () {
     this.setData({
@@ -258,7 +259,7 @@ Page({
         case 0: percivalNotice += k + " "; break;
         case 3: percivalNotice += k + " "; merlinNotice += k + " "; mordredNotice += k + " "; lackeyNotice += k + " "; assassinNotice += k + " "; break;
         case 4: merlinNotice += k + " "; morganaNotice += k + " "; mordredNotice += k + " "; lackeyNotice += k + " "; break;
-        case 5: merlinNotice += k + " "; morganaNotice += k + " "; lackeyNotice += k + " "; assassinNotice += k + " "; break;
+        case 5: morganaNotice += k + " "; lackeyNotice += k + " "; assassinNotice += k + " "; break;
         case 6: merlinNotice += k + " "; break;
         case 7: merlinNotice += k + " "; morganaNotice += k + " "; mordredNotice += k + " "; assassinNotice += k + " "; break;
       }
@@ -332,6 +333,24 @@ Page({
 
   },
   showRoleDetail: function (e) {
+    if (!this.data.detail1 && !this.data.detail2 && !this.data.detail3 && !this.data.detail4 && !this.data.detail5 &&
+      !this.data.detail6 && !this.data.detail7 && !this.data.detail8 && !this.data.detail9 && !this.data.detail10) {
+      switch (this.data.userList[Number(e.target.dataset.i) - 1].id) {
+        case 0: this.setData({ roleDetailNotice: this.data.merlinNotice }); break;
+        case 1: this.setData({ roleDetailNotice: this.data.percivalNotice }); break;
+        case 2: this.setData({ roleDetailNotice: "请确认身份" }); break;
+        case 3: this.setData({ roleDetailNotice: this.data.morganaNotice }); break;
+        case 4: this.setData({ roleDetailNotice: this.data.assassinNotice }); break;
+        case 5: this.setData({ roleDetailNotice: this.data.mordredNotice }); break;
+        case 6: this.setData({ roleDetailNotice: "请确认身份" }); break;
+        case 7: this.setData({ roleDetailNotice: this.data.lackeyNotice }); break;
+      }
+    } else {
+      this.setData({
+        roleDetailNotice: "点击查看身份"
+      });
+    }
+
     switch (e.target.dataset.i) {
       case "1": if (this.data.detail1)
         this.setData({
@@ -340,7 +359,7 @@ Page({
       else
         this.setData({
           detail1: true
-        });; break;
+        }); break;
       case "2": if (this.data.detail2)
         this.setData({
           detail2: false

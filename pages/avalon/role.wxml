@@ -18,7 +18,7 @@
     </view>
   </view>
   <view class="{{firstRole?'blur':''}}">
-    <view style="width:100%;text-align:center;margin:20px 0 0 0;color:#777777">点击查看身份</view>
+    <view style="width:100%;text-align:center;margin:20px 0 0 0;color:#777777">{{roleDetailNotice}}</view>
     <view style='padding: 0 20px;'>
       <view class="tr" style='margin-top: 30px'>
         <view class="td">
