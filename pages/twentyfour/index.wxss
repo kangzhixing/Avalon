@@ -1,0 +1,30 @@
+.vText{
+  top: 8%;
+  position:fixed;
+}
+
+.vContent{
+  top:65%;
+  position:fixed;
+}
+
+.title{
+  color: grey;
+  font-size: 150px;
+  font-family:'Georgia';
+}
+
+.btnGame{
+  width: 150px;
+  background-color: #34A853;
+  margin-top: 10px;
+  color: white;
+}
+
+.btnAnswer{
+  width: 150px;
+  background-color: #4285F4;
+  margin-top: 10px;
+  color: white;
+}
+

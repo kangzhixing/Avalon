@@ -45,7 +45,7 @@
 .btnGetRole{
   color: white;
   width: 160px;
-  background-color: green;
+  background-color: #34A853;
 }
 
 .btnStart {

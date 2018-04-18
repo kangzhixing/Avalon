@@ -2,10 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/vote/vote",
+    "pages/avalon/vote/vote",
     "pages/avalon/role",
     "pages/avalon/newgame",
-    "pages/vote/choosenum"
+    "pages/avalon/vote/choosenum",
+    "pages/twentyfour/index",
+    "pages/twentyfour/answer",
+    "pages/twentyfour/game"
   ],
   "window": {
     "backgroundTextStyle": "light",

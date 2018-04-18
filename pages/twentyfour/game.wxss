@@ -1,0 +1,55 @@
+/* pages/twentyfour/answer.wxss */
+
+.vNum input {
+  border: 1px solid lightgrey;
+  width: 65px;
+  height: 65px;
+  line-height: 50px;
+  font-size: 40px;
+  text-align: center;
+  border-radius: 15px;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.btn{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  line-height: 56px;
+  border: none;
+  background-color: #ea4335;
+  position: fixed;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                0 3px 1px -2px rgba(0, 0, 0, 0.12),
+                0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  bottom: 50px;
+  right: 20px;
+}
+
+.btnNext{
+  bottom: 130px;
+  background-color: #34A853;
+}
+
+.btnGetAnswer {
+  bottom: 50px;
+  background-color: #ea4335;
+}
+
+.btn i {
+  font-size: 40px;
+  font-weight: bolder;
+  color: white;
+  position: relative;
+  top: -3px;
+  left: -1px;
+}
+
+.vContent {
+  position: fixed;
+  top: 40%;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+}

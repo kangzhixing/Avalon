@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="vText">
+    <text class="title">24</text>
+  </view>
+  <view class="vContent">
+    <button bindtap="goGame" form-type="submit" class="btnGame">做题</button>
+    <button bindtap="goAnswer" form-type="submit" class="btnAnswer">求解</button>
+  </view>
+</view>

@@ -5,17 +5,17 @@ const app = getApp()
 Page({
   data: {
   },
-  goAvalon: function () {
+  goGame: function () {
     wx.navigateTo({
-      url: '../avalon/newgame'
+      url: '../twentyfour/game'
     })
   },
-  go24: function () {
+  goAnswer: function () {
     wx.navigateTo({
-      url: '../twentyfour/index'
+      url: '../twentyfour/answer'
     })
   },
   onLoad: function () {
-    
+
   }
 })

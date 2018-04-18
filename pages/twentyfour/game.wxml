@@ -1,0 +1,18 @@
+<!--pages/twentyfour/game.wxml-->
+<view class="container">
+  <view class="vNum">
+    <input class="txt1" disabled='true' data-i='1' value='{{num1}}'></input>
+    <input class="txt2" disabled='true' data-i='2' value='{{num2}}'></input>
+    <input class="txt3" disabled='true' data-i='3' value='{{num3}}'></input>
+    <input class="txt4" disabled='true' data-i='4' value='{{num4}}'></input>
+  </view>
+  <button class='btn btnNext' bindtap='btnNext'>
+    <i>></i>
+  </button>
+  <button class='btn btnGetAnswer' bindtap='getAnswer'>
+    <i>=</i>
+  </button>
+  <text class="vContent">
+  {{content}}
+  </text>
+</view>

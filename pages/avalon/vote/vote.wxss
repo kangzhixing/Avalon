@@ -62,7 +62,7 @@
 
 .btnVoteAgain {
   width: 160px;
-  background-color: green;
+  background-color: #34A853;
   color: white;
 }
 

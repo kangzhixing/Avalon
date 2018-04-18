@@ -5,7 +5,8 @@
     <text class="title"></text>
   </view>
   <view class="vContent">
-    <button bindtap="goAvalon" form-type="submit" class="btnAvalon">阿瓦隆(5~10)</button>
+    <button bindtap="goAvalon" form-type="submit" class="btnAvalon">阿瓦隆(5~10人)</button>
+    <button bindtap="go24" form-type="submit" class="btn24">计算24点</button>
     <button class="btnWerewolf">狼人杀(暂未开放)</button>
   </view>
 </view>

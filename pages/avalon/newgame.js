@@ -108,7 +108,7 @@ Page({
   },
   goVote: function (e) {
     wx.navigateTo({
-      url: '../vote/choosenum'
+      url: '../avalon/vote/choosenum'
     })
   }
 })
