@@ -37,6 +37,9 @@ Page({
     var i = parseInt(e.target.dataset.i);
     switch (i) {
       case 1: {
+        if(!this.data.txt1show){
+          return;
+        }
         if (this.data.txt1focus) {
           this.setData({
             tempnum: 0,
@@ -82,6 +85,9 @@ Page({
         break;
       }
       case 2: {
+        if (!this.data.txt2show) {
+          return;
+        }
         if (this.data.txt2focus) {
           this.setData({
             tempnum: 0,
@@ -127,6 +133,9 @@ Page({
         break;
       }
       case 3: {
+        if (!this.data.txt3show) {
+          return;
+        }
         if (this.data.txt3focus) {
           this.setData({
             tempnum: 0,
@@ -172,6 +181,9 @@ Page({
         break;
       }
       case 4: {
+        if (!this.data.txt4show) {
+          return;
+        }
         if (this.data.txt4focus) {
           this.setData({
             tempnum: 0,
