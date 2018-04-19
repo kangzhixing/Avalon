@@ -33,11 +33,10 @@ Page({
   },
 
   txtfocus: function (e) {
-    wx.vibrateShort();
     var i = parseInt(e.target.dataset.i);
     switch (i) {
       case 1: {
-        if(!this.data.txt1show){
+        if (!this.data.txt1show) {
           return;
         }
         if (this.data.txt1focus) {
@@ -287,16 +286,14 @@ Page({
 
     }
 
+    wx.vibrateShort();
+
   },
 
   wellDone: function () {
     var count = 1;
     var storage = wx.getStorageSync("done");
-
-    wx.setStorage({
-      key: "done",
-      data: storage == '' ? 1 : storage + 1
-    });
+    wx.setStorageSync("done", storage == '' ? 2 : storage + 1);
 
     this.initNumbers();
     this.setData({
@@ -417,22 +414,10 @@ Page({
             num4: d,
             tempnum: 0
           });
-          wx.setStorage({
-            key: 'num1',
-            data: a,
-          });
-          wx.setStorage({
-            key: 'num2',
-            data: b,
-          });
-          wx.setStorage({
-            key: 'num3',
-            data: c,
-          });
-          wx.setStorage({
-            key: 'num4',
-            data: d,
-          });
+          wx.setStorageSync('num1', a);
+          wx.setStorageSync('num2', b);
+          wx.setStorageSync('num3', c);
+          wx.setStorageSync('num4', d);
           break;
         }
       }
