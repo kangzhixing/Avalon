@@ -6,7 +6,7 @@ function tdisoper(f0, f1, f2, f3) {
   this[3] = f3;
 }
 
-var disoper = new tdisoper("-", "+", "/", "*");
+var disoper = new tdisoper("-", "+", "%", "×");
 
 function oper(f, m, n) {
   if (f == 3) return (m * n);

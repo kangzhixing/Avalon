@@ -1,14 +1,18 @@
 <!--pages/twentyfour/answer.wxml-->
 <view class="container">
   <view class="vNum">
-    <input class="txt1" type="number" bindinput='txtInput' data-i='1' maxlength='2' focus="true"></input>
-    <input class="txt2" type="number" bindinput='txtInput' data-i='2' maxlength='2'></input>
-    <input class="txt3" type="number" bindinput='txtInput' data-i='3' maxlength='2'></input>
-    <input class="txt4" type="number" bindinput='txtInput' data-i='4' maxlength='2'></input>
+    <input class="txt1" type="number" bindinput='txtInput' data-i='1' maxlength='2' value='{{num1}}' focus="true"></input>
+    <input class="txt2" type="number" bindinput='txtInput' data-i='2' maxlength='2' value='{{num2}}'></input>
+    <input class="txt3" type="number" bindinput='txtInput' data-i='3' maxlength='2' value='{{num3}}'></input>
+    <input class="txt4" type="number" bindinput='txtInput' data-i='4' maxlength='2' value='{{num4}}'></input>
   </view>
-  <button class='btnGetAnswer' bindtap='getAnswer'>
-  <i>=</i></button>
   <text class="vContent">
   {{content}}
   </text>
 </view>
+<button class='btn btnRefresh' bindtap='btnRefresh'>
+  <view></view>
+</button>
+<button class='btn btnGetAnswer' bindtap='getAnswer'>
+  <i>=</i>
+</button>

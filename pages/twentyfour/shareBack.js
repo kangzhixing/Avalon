@@ -266,7 +266,7 @@ Page({
           });
         } else {
           this.setData({
-            tempsign: '/',
+            tempsign: '/'
           });
           this.initSign(4);
         }
@@ -277,19 +277,16 @@ Page({
 
   },
 
+  btnNext: function () {
+    wx.vibrateShort();
+
+    wx.redirectTo({
+      url: '../twentyfour/index'
+    })
+  },
   wellDone: function () {
-    var count = 1;
-    var storage = wx.getStorageSync("done");
-
-    wx.setStorage({
-      key: "done",
-      data: storage == '' ? 1 : storage + 1
-    });
-
-    this.initNumbers();
     this.setData({
-      welldone: true,
-      countDone: storage == '' ? 1 : storage + 1
+      welldone: true
     });
   },
 
@@ -333,10 +330,47 @@ Page({
     } else {
       this.initNumbers();
     }
-    var doneCount = wx.getStorageSync('done');
-    wx.setNavigationBarTitle({
-      title: '第 ' + (doneCount == '' ? '1' : doneCount) + ' 题',
-    })
+    
+  },
+  initNumbers: function (a, b, c, d) {
+    if (a != null) {
+      this.setData({
+        orinum1: a,
+        orinum2: b,
+        orinum3: c,
+        orinum4: d,
+        num1: a,
+        num2: b,
+        num3: c,
+        num4: d,
+        tempnum: 0
+      });
+    } else {
+      while (true) {
+        a = utils.RandomNumBoth(1, 13);
+        b = utils.RandomNumBoth(1, 13);
+        c = utils.RandomNumBoth(1, 13);
+        d = utils.RandomNumBoth(1, 13);
+
+        var result = utils.get24(a, b, c, d);
+        if (result != "") {
+          this.setData({
+            orinum1: a,
+            orinum2: b,
+            orinum3: c,
+            orinum4: d,
+            num1: a,
+            num2: b,
+            num3: c,
+            num4: d,
+            tempnum: 0
+          });
+          break;
+        }
+      }
+    }
+
+
   },
   onShareAppMessage: function (res) {
     return {
@@ -372,62 +406,6 @@ Page({
     }
 
   },
-  initNumbers: function (a, b, c, d) {
-    if (a != null) {
-      this.setData({
-        orinum1: a,
-        orinum2: b,
-        orinum3: c,
-        orinum4: d,
-        num1: a,
-        num2: b,
-        num3: c,
-        num4: d,
-        tempnum: 0
-      });
-    } else {
-      while (true) {
-        a = utils.RandomNumBoth(1, 13);
-        b = utils.RandomNumBoth(1, 13);
-        c = utils.RandomNumBoth(1, 13);
-        d = utils.RandomNumBoth(1, 13);
-
-        var result = utils.get24(a, b, c, d);
-        if (result != "") {
-          this.setData({
-            orinum1: a,
-            orinum2: b,
-            orinum3: c,
-            orinum4: d,
-            num1: a,
-            num2: b,
-            num3: c,
-            num4: d,
-            tempnum: 0
-          });
-          wx.setStorage({
-            key: 'num1',
-            data: a,
-          });
-          wx.setStorage({
-            key: 'num2',
-            data: b,
-          });
-          wx.setStorage({
-            key: 'num3',
-            data: c,
-          });
-          wx.setStorage({
-            key: 'num4',
-            data: d,
-          });
-          break;
-        }
-      }
-    }
-
-
-  },
   btnRefresh: function () {
     wx.vibrateShort();
     this.setData({
@@ -447,15 +425,6 @@ Page({
 
     this.initNum();
     this.initSign();
-  },
-  btnNext: function () {
-    wx.vibrateShort();
-    this.btnRefresh();
-    var count = wx.getStorageSync("done");
-
-    wx.setNavigationBarTitle({
-      title: '第 ' + (count == '' ? 1 : count) + ' 题',
-    })
   }
 
 })

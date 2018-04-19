@@ -23,9 +23,9 @@
 <button class="btn btnRefresh {{welldone?'dn':''}}" bindtap='btnRefresh'>
   <view></view>
 </button>
-<button class="btn btnNext {{welldone?'':'dn'}}" bindtap='btnNext'>
-  <i>></i>
-</button>
 <button class="btn btnHelp {{welldone?'dn':''}}" open-type="share" bindtap='btnHelp'>
   <i style='font-size:25px;top:-1px;left:-6px'>sos</i>
+</button>
+<button class="btn btnNext" bindtap='btnNext'>
+  <i>></i>
 </button>

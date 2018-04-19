@@ -8,7 +8,8 @@
     "pages/avalon/vote/choosenum",
     "pages/twentyfour/index",
     "pages/twentyfour/answer",
-    "pages/twentyfour/game"
+    "pages/twentyfour/game",
+    "pages/twentyfour/shareBack"
   ],
   "window": {
     "backgroundTextStyle": "light",

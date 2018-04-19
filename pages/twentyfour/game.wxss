@@ -1,22 +1,40 @@
 /* pages/twentyfour/answer.wxss */
 
-.vNum input {
+.basicBorder {
   border: 1px solid lightgrey;
   width: 65px;
   height: 65px;
-  line-height: 50px;
-  font-size: 40px;
+  line-height: 65px;
+  font-size: 30px;
   text-align: center;
   border-radius: 15px;
   display: inline-block;
-  margin: 0 8px;
+  margin: 10px 8px 0 8px;
 }
 
-.btn{
+.txthide {
+  border: 1px solid white;
+  color: white;
+}
+
+.dn {
+  display: none;
+}
+
+.vSign text {
+  line-height: 58px;
+  margin: 10px 8px;
+}
+
+.bold {
+  background-color: grey;
+  color: white;
+}
+
+.btn {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  line-height: 56px;
   border: none;
   background-color: #ea4335;
   position: fixed;
@@ -27,14 +45,27 @@
   right: 20px;
 }
 
-.btnNext{
+.btnRefresh {
   bottom: 130px;
-  background-color: #34A853;
+  background-color: #4285f4;
 }
 
-.btnGetAnswer {
+.btnRefresh view {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 4px dashed white;
+  margin: 17px auto;
+}
+
+.btnNext {
   bottom: 50px;
-  background-color: #ea4335;
+  background-color: #34a853;
+}
+
+.btnHelp {
+  bottom: 50px;
+  background-color: #fbbc05;
 }
 
 .btn i {
@@ -44,12 +75,42 @@
   position: relative;
   top: -3px;
   left: -1px;
+  text-align: center;
+  line-height: 56px;
 }
 
 .vContent {
   position: fixed;
-  top: 40%;
+  top: 50%;
   font-size: 30px;
   text-align: center;
   width: 100%;
+}
+
+.vDone {
+  width: 100%;
+  height: 65px;
+  position: relative;
+  text-align: center;
+  line-height: 65px;
+  font-weight: bold;
+  color: #ea4335;
+}
+
+.vDone .title {
+  position: fixed;
+  top: 30%;
+  text-align: center;
+  width: 100%;
+  font-size: 50px;
+  font-family: 'Edwardian Script ITC';
+}
+
+.vDone .cnt {
+  position: fixed;
+  top: 40%;
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+  font-family: '微软雅黑';
 }
