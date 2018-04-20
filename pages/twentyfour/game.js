@@ -295,11 +295,11 @@ Page({
     var storage = wx.getStorageSync("done");
     wx.setStorageSync("done", storage == '' ? 2 : storage + 1);
 
-    this.initNumbers();
     this.setData({
       welldone: true,
       countDone: storage == '' ? 1 : storage + 1
     });
+    this.initNumbers();
   },
 
   initNum: function (e) {
