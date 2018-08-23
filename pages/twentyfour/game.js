@@ -428,6 +428,7 @@ Page({
   btnRefresh: function () {
     wx.vibrateShort();
     this.setData({
+      welldone: false,
       num1: this.data.orinum1,
       num2: this.data.orinum2,
       num3: this.data.orinum3,
@@ -438,8 +439,7 @@ Page({
       txt2show: true,
       txt3show: true,
       txt4show: true,
-      content: "",
-      welldone: false
+      content: ""
     });
 
     this.initNum();
